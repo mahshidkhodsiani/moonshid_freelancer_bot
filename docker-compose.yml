@@ -1,0 +1,22 @@
+name: moonshidbot
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: ghcr.io/mahshidkhodsiani/moonshid_freelancer_bot:${VERSION}
+    container_name: moonshidbot
+    restart: unless-stopped
+    environment:
+      - TOKEN=${TOKEN}
+      - CHANNEL_ID=${CHANNEL_ID}
+    dns:
+      - 1.1.1.1
+      - 1.0.0.1
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge

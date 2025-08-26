@@ -1,0 +1,5 @@
+__pycache__/*
+
+requirements.dev.txt
+.env
+.env.template

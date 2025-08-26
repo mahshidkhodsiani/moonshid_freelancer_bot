@@ -1,0 +1,1 @@
+# MoonshidBot package initialization
